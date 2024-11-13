@@ -7,8 +7,8 @@ def connect():
         connection = mysql.connector.connect(
             host='localhost',
             database='videogames_db',
-            user='root',  # Cambia esto si tu usuario de MySQL es diferente
-            password='password'  # Cambia esto por tu contraseña
+            user='root',  
+            password='password'  
         )
         if connection.is_connected():
             print("Conexión exitosa a la base de datos")
@@ -36,7 +36,7 @@ def read_games(connection):
     for game in games:
         print(f"ID: {game[0]}, Nombre: {game[1]}, Fecha de lanzamiento: {game[2]}, Género: {game[3]}")
 
-# Función para actualizar la información de un juego
+# Función para actualizar
 def update_game(connection):
     cursor = connection.cursor()
     game_id = input("ID del juego a actualizar: ")
